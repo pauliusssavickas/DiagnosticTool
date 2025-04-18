@@ -1,0 +1,345 @@
+/* resources/css/Home.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #020817;
+  color: #e2e8f0;
+}
+
+.page-container {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: #7dd3fc;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.domain-input {
+  width: 400px;
+  padding: 12px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: white;
+  font-size: 16px;
+}
+
+.check-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .domain-input {
+    width: 100%;
+  }
+  .check-btn {
+    width: 100%;
+  }
+}
+
+.error-msg {
+  text-align: center;
+  color: #f87171;
+  margin-top: 10px;
+}
+
+/* Domain‑mode record buttons */
+.record-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.record-btn {
+  padding: 6px 14px;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.record-btn.active,
+.record-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* IP‑mode port selection */
+.port-selection {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.custom-port-input {
+  appearance: none;
+  width: 100px;
+  padding: 6px 8px;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.add-port-btn {
+  margin-left: 4px;
+}
+
+/* MAIN GRID */
+.info-grid {
+  display: flex;
+  justify-content: flex-start;  /* use gap for spacing, not space-between */
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* LEFT COLUMN PANELS */
+.dns-section {
+  width: 380px;      /* wider than before */
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.port-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.port-placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-style: italic;
+  background: #1e293b;
+  border: 1px dashed #334155;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.port-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.port-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.port-item.open {
+  border-color: #22c55e;
+}
+
+.port-item.closed {
+  border-color: #ef4444;
+  opacity: 0.8;
+}
+
+.port-label {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+/* GeoIP panel */
+.whois-section {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 380px;  /* match left column */
+}
+
+.whois-section p,
+.whois-section ul {
+  margin-bottom: 0.75rem;
+}
+
+.whois-section ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+/* DNS Propagation list */
+.dns-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dns-item {
+  border-bottom: 1px solid #334155;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dns-header {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin-bottom: 0.25rem;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.flag-img {
+  width: 24px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 1px #00000044;
+}
+
+.region {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.dns-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.value-block {
+  flex: 1;
+}
+
+.value-line {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #7dd3fc;
+  margin-bottom: 0.2rem;
+}
+
+.dns-item.success .value-line {
+  color: #22c55e;
+}
+
+.dns-item.fail .value-line {
+  color: #ef4444;
+}
+
+.status-icon {
+  font-size: 1.4rem;
+  min-width: 2rem;
+  text-align: right;
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  animation: blink 1.5s infinite ease-in-out;
+  color: #3b82f6;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    flex-direction: column;
+  }
+  .dns-section,
+  .whois-section {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* RIGHT COLUMN PANELS */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;        /* vertical gap SSL ↔ WHOIS */
+  flex-shrink: 0;
+  width: 380px;     /* match left column */
+}
+
+.ssl-section {
+  width: 100%;      /* fill its container */
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
