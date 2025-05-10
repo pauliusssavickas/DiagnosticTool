@@ -79,11 +79,11 @@ The tool integrates with several third-party services to gather up-to-date netwo
 
 - **Port Checker API**  
   - **Endpoint:** `https://portchecker.io/api/{ip}/{port}`  
-  - **What it does:** Tests whether specified TCP ports on an IPv4 address are open or closed. We send your selected ports and receive a simple JSON response indicating each port’s status.
+  - **What it does:** Tests whether specified TCP ports on an IPv4 address are open or closed. After selecter ports are sent to the API, we receive a simple JSON response indicating each port’s status.
 
 - **SSL Checker API**  
   - **Endpoint:** `https://ssl-checker.io/api/v1/check/{domain}`  
-  - **What it does:** Retrieves SSL/TLS certificate details for a domain, including the issuer, validity period (start and end dates), and days remaining until expiration. We parse this to show you certificate health at a glance.
+  - **What it does:** Retrieves SSL/TLS certificate details for a domain, including the issuer, validity period (start and end dates), and days remaining until expiration.
 
 - **WHOIS API (ip2whois.com)**  
   - **Endpoint:** `https://api.ip2whois.com/v2?key={key}&domain={domain}`  
@@ -91,9 +91,9 @@ The tool integrates with several third-party services to gather up-to-date netwo
 
 - **IP Geolocation API (ip2location.io)**  
   - **Endpoint:** `https://api.ip2location.io/?key={key}&ip={ip}`  
-  - **What it does:** Provides geolocation details (city, region, country), ISP and ASN information for an IPv4 address. This powers our “IP Location” panel to show you where an IP is physically located.
+  - **What it does:** Provides geolocation details (city, region, country), ISP and ASN information for an IPv4 address. This powers the “IP Location” panel to show you where an IP is physically located.
 
-> **Note:** Some of these services require an API key - be sure to configure your `.env` file with the appropriate credentials before running the application.
+> **Note:** Some of these services require an API key - be sure to configure your `.env` file with the appropriate credentials before running the application locally.
 
 
 ## Requirements
@@ -103,13 +103,6 @@ The tool integrates with several third-party services to gather up-to-date netwo
 - Node.js 16+ & npm/yarn
 
 ---
-
-## Installation
-- Clone the repository
-- Install NodeJS with npm and Composer
-- Update Composer packages with "composer update"
-- Edit the example .env file by adding an API key from api.ip2whois.com. It should be added like so: IP2WHOIS_API_KEY="key"
-- Run "npm run dev" and "php artisan serve"
 
 ## Installation
 Follow these steps to get the project up and running locally:
