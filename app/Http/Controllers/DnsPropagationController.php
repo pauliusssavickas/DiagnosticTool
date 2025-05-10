@@ -30,7 +30,7 @@ class DnsPropagationController extends Controller
 
         $domain = $request->input('domain');
         $type = strtoupper($request->input('type'));
-        $digPath = 'C:\\ProgramData\\chocolatey\\bin\\dig.exe';
+        $digPath = 'C:\\ProgramData\\chocolatey\\bin\\dig.exe';  // NOTE: Edit the path to match the location of your "dig" executable
 
         $results = [];
 
