@@ -146,4 +146,6 @@ npm run dev
 php artisan serve
 ```
 You should now be able to access the application in your browser
+
+> **Note:** If DNS propagation information retrieval is not working, there's a good chance that you need to update the path for "dig" executable in app/Http/Controllers/DnsPropagationController.php, line 33. You can determine the path on a Linux system by using "which dig" command in the terminal.
    
